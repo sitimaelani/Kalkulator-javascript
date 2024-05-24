@@ -1,0 +1,57 @@
+<html>
+<head>
+ <title>Kalkulator sederhana</title>
+</head>
+<body>
+ <form name="kalkulator">
+    <table border="1" cellspacing="0" cellpadding="5" align="center" width="200px" height="200px">
+        <td style="background-color:  #f2f89e; "><p align="center">
+         <font face="Kristen ITC"  size="5">Kalkulator</font></p></td>
+        <tr style="background-color:  #f2f89e; ">
+         <td>Angka 1 :<input type="number" name="angka1"></td>
+        </tr>
+        <tr style="background-color:  #f2f89e; ">
+         <td>Angka 2 :<input type="number" name="angka2"></td>
+        </tr>
+        <tr style="background-color:  #f2f89e; ">
+         <td>Hasil :<input type="number" name="hasil"></td>
+        </tr>
+        <tr style="background-color:  #f2f89e; ">
+         <td colspan="3" align="center" >
+          <input class="tombol" type="button" onclick="tambah()" value="  +  ">
+          <input class="tombol" type="button" onclick="kurang()" value="  -  ">
+          <input class="tombol" type="button" onclick="kali()" value="  *  ">
+          <input class="tombol" type="button" onclick="bagi()" value="  /  ">
+        </td>
+        </tr>
+    </table>
+ </form>
+
+</body>
+</html>
+<script type="text/javascript">
+function tambah(){
+ var angka1=parseFloat(document.kalkulator.angka1.value);
+ var angka2=parseFloat(document.kalkulator.angka2.value);
+ var hasil= angka1+angka2;
+ document.kalkulator.hasil.value=hasil;
+}
+function kurang(){
+ var angka1=parseFloat(document.kalkulator.angka1.value);
+ var angka2=parseFloat(document.kalkulator.angka2.value);
+ var hasil= angka1-angka2;
+ document.kalkulator.hasil.value=hasil;
+}
+function kali(){
+ var angka1=parseFloat(document.kalkulator.angka1.value);
+ var angka2=parseFloat(document.kalkulator.angka2.value);
+ var hasil= angka1*angka2;
+ document.kalkulator.hasil.value=hasil;
+}
+function bagi(){
+ var angka1=parseFloat(document.kalkulator.angka1.value);
+ var angka2=parseFloat(document.kalkulator.angka2.value);
+ var hasil= angka1/angka2;
+ document.kalkulator.hasil.value=hasil;
+}
+</script>
